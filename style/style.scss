@@ -1,0 +1,14 @@
+//sass --watch css/style.scss:css/style.css
+
+// variables
+$tablet: 1024px;
+$phone: 360px;
+
+//fonts
+@font-face {
+    font-family: "Roboto";
+    src: url("../assets/fonts/Roboto-Regular.ttf")
+            format("ttf");
+    font-weight: normal;
+    font-style: normal;
+}
