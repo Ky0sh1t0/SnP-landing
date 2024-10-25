@@ -4,6 +4,8 @@
 $tablet: 1024px;
 $phone: 360px;
 
+
+
 //fonts
 @font-face {
     font-family: "Roboto";
@@ -29,8 +31,9 @@ $phone: 360px;
     font-style: normal;
 }
 
-// global styles
 
+
+// global styles
 html {
     font-size: 10px;
 }
@@ -45,4 +48,55 @@ html {
 
 h1, h2, h3 {
     font-weight: bold;
+}
+
+// class global style
+.bg_global_img {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    max-width: 100%;
+
+    img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+}
+
+.tm__width {
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+.div-text {
+    line-height: 140%;
+}
+
+
+// styles
+.tm__header-container {
+    padding: 2.9rem 0;
+}
+
+
+.header-container {
+    display: flex;
+    color: rgba(255, 255, 255, 1);
+    align-items: center;
+    justify-content: space-between;
+
+    .header-img {
+        max-width: 18rem;
+        max-height: 3.2rem;
+
+        img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+    }
+
+    .header-tab {
+        display: inline-flex;
+        gap: 5rem;
+    }
 }

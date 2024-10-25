@@ -32,4 +32,47 @@ h1, h2, h3 {
   font-weight: bold;
 }
 
+.bg_global_img {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  max-width: 100%;
+}
+.bg_global_img img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.tm__width {
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+.div-text {
+  line-height: 140%;
+}
+
+.tm__header-container {
+  padding: 2.9rem 0;
+}
+
+.header-container {
+  display: flex;
+  color: rgb(255, 255, 255);
+  align-items: center;
+  justify-content: space-between;
+}
+.header-container .header-img {
+  max-width: 18rem;
+  max-height: 3.2rem;
+}
+.header-container .header-img img {
+  max-width: 100%;
+  max-height: 100%;
+}
+.header-container .header-tab {
+  display: inline-flex;
+  gap: 5rem;
+}
+
 /*# sourceMappingURL=style.css.map */
