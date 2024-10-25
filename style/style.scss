@@ -12,3 +12,37 @@ $phone: 360px;
     font-weight: normal;
     font-style: normal;
 }
+
+@font-face {
+    font-family: "Roboto";
+    src: url("../assets/fonts/Roboto-Medium.ttf")
+            format("ttf");
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url("../assets/fonts/Roboto-Bold.ttf")
+            format("ttf");
+    font-weight: bold;
+    font-style: normal;
+}
+
+// global styles
+
+html {
+    font-size: 10px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto";
+    font-size: 2rem;
+}
+
+h1, h2, h3 {
+    font-weight: bold;
+}
