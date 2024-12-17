@@ -79,5 +79,40 @@ h1 {
   display: inline-flex;
   gap: 5rem;
 }
+.header-container .nav_item {
+  text-decoration: none;
+  color: #fff;
+  position: relative;
+}
+.header-container .nav_item:hover::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background: #fff;
+  bottom: 0;
+  left: 0;
+}
+
+.Tour_cont {
+  text-align: center;
+  max-width: 60rem;
+  margin: 0 auto;
+  margin-bottom: 25.4rem;
+}
+.Tour_cont h1 {
+  margin-bottom: 5rem;
+}
+.Tour_cont .div-text {
+  font-size: 2rem;
+  color: #fff;
+  margin-bottom: 5rem;
+}
+.Tour_cont .btn {
+  font-size: 1.7rem;
+  padding: 0.5rem 2rem;
+  border-radius: 1rem;
+  background: #fff;
+}
 
 /*# sourceMappingURL=style.css.map */
