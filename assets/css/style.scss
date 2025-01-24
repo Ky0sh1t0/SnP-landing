@@ -78,7 +78,7 @@ h1 {
 }
 
 
-// styles
+// block styles
 .tm__header-container {
     padding: 2.9rem 0;
 }
@@ -134,7 +134,7 @@ h1 {
     margin: 0 auto;
     margin-bottom: 25.4rem;
 
-    h1 {
+    .headline {
         margin-bottom: 5rem;
     }
 
@@ -149,5 +149,92 @@ h1 {
         padding: .5rem 2rem;
         border-radius: 1rem;
         background: #fff;
+    }
+}
+
+
+// Second block style
+
+.Tour_cont2 {
+    
+    .headline-2 {
+        font-size: 6rem;
+        font-weight: 700;
+        margin-bottom: 3.5rem;
+        text-align: center;
+    }
+
+    .nav_tab {
+        display: flex;
+        gap: 3rem;
+        margin: 0 auto;
+        margin-bottom: 10rem;
+        width: fit-content;
+    }
+
+
+    .pick_the_tour {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 3rem;
+    }
+    
+    .pick_the_tour-card {
+        padding: 5rem;
+        display: flex;
+        flex-direction: column;
+        border-radius: 5rem;
+        max-width: 37rem;
+        color: #fff;
+        min-height: 53rem;
+
+        &-1 {
+            background: url('../images/card_tour_photo-1.jpg') no-repeat;
+            object-fit: cover;
+        }
+
+        &-2 {
+            background: url('../images/card_tour_photo-2.jpg')no-repeat;
+            object-fit: cover;
+        }
+
+        &-3 {
+            background: url('../images/card_tour_photo-3.jpg')no-repeat;
+            object-fit: cover;
+        }
+
+        &-4 {
+            background: url('../images/card_tour_photo-4.jpg')no-repeat;
+            object-fit: cover;
+        }
+
+        &-5 {
+            background: url('../images/card_tour_photo-5.jpg')no-repeat;
+            object-fit: cover;
+        }
+
+        &-6 {
+            background: url('../images/card_tour_photo-6.jpg')no-repeat;
+            object-fit: cover;
+        }
+
+        &-header {
+            font-size: 3.5rem;
+            font-weight: 500;
+        }
+
+        &-price {
+            font-size: 1.7rem;
+        }
+
+        &-btn {
+            margin-top: auto;
+            font-size: 2.3rem;
+            font-weight: 700;
+            
+            span {
+                margin-left: 1.5rem;
+            }
+        }
     }
 }
