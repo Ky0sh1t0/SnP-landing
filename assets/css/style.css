@@ -57,6 +57,28 @@ h1 {
   line-height: 140%;
 }
 
+.nav_item {
+  text-decoration: none;
+  color: #fff;
+  position: relative;
+}
+.nav_item:hover::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background: #fff;
+  bottom: 0;
+  left: 0;
+}
+.nav_item.active {
+  color: #EFA501 !important;
+}
+.nav_item.active::after {
+  height: 2px;
+  background: #EFA501;
+}
+
 .tm__header-container {
   padding: 2.9rem 0;
 }
@@ -78,20 +100,6 @@ h1 {
 .header-container .header-tab {
   display: inline-flex;
   gap: 5rem;
-}
-.header-container .nav_item {
-  text-decoration: none;
-  color: #fff;
-  position: relative;
-}
-.header-container .nav_item:hover::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 1px;
-  background: #fff;
-  bottom: 0;
-  left: 0;
 }
 
 .Tour_cont {
@@ -115,6 +123,9 @@ h1 {
   background: #fff;
 }
 
+.Tour_cont2 {
+  margin-bottom: 13.5rem;
+}
 .Tour_cont2 .headline-2 {
   font-size: 6rem;
   font-weight: 700;
@@ -127,6 +138,16 @@ h1 {
   margin: 0 auto;
   margin-bottom: 10rem;
   width: fit-content;
+}
+.Tour_cont2 .nav_tab .nav_item {
+  font-weight: 700;
+  font-size: 2.3rem;
+  color: #000;
+  cursor: pointer;
+}
+.Tour_cont2 .nav_tab .nav_item:hover::after {
+  height: 2px;
+  background: #000;
 }
 .Tour_cont2 .pick_the_tour {
   display: flex;

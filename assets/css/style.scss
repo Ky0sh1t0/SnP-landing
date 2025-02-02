@@ -78,6 +78,34 @@ h1 {
 }
 
 
+.nav_item {
+    text-decoration: none;
+    color: #fff;
+    position: relative;
+
+    &:hover {
+        &::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 1px;
+            background: #fff;
+            bottom: 0;
+            left: 0;
+        }
+    }
+
+    &.active {
+        color: #EFA501 !important;
+
+        &::after {
+            height: 2px;
+            background: #EFA501;
+        }
+    }
+}
+
+
 // block styles
 .tm__header-container {
     padding: 2.9rem 0;
@@ -104,24 +132,6 @@ h1 {
     .header-tab {
         display: inline-flex;
         gap: 5rem;
-    }
-
-    .nav_item {
-        text-decoration: none;
-        color: #fff;
-        position: relative;
-
-        &:hover {
-            &::after {
-                content: "";
-                position: absolute;
-                width: 100%;
-                height: 1px;
-                background: #fff;
-                bottom: 0;
-                left: 0;
-            }
-        }
     }
 }
 
@@ -156,6 +166,7 @@ h1 {
 // Second block style
 
 .Tour_cont2 {
+    margin-bottom: 13.5rem;
     
     .headline-2 {
         font-size: 6rem;
@@ -170,6 +181,18 @@ h1 {
         margin: 0 auto;
         margin-bottom: 10rem;
         width: fit-content;
+
+        .nav_item {
+            font-weight: 700;
+            font-size: 2.3rem;
+            color: #000;
+            cursor: pointer;
+
+            &:hover::after {
+                height: 2px;
+                background: #000;
+            }
+        }
     }
 
 
