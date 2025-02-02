@@ -105,6 +105,13 @@ h1 {
     }
 }
 
+.headline-2 {
+    font-size: 6rem;
+    font-weight: 700;
+    margin-bottom: 3.5rem;
+    text-align: center;
+}
+
 
 // block styles
 .tm__header-container {
@@ -135,6 +142,9 @@ h1 {
     }
 }
 
+.Tour_for_all {
+    margin-bottom: 13.5rem;
+}
 
 // first block style
 
@@ -166,15 +176,6 @@ h1 {
 // Second block style
 
 .Tour_cont2 {
-    margin-bottom: 13.5rem;
-    
-    .headline-2 {
-        font-size: 6rem;
-        font-weight: 700;
-        margin-bottom: 3.5rem;
-        text-align: center;
-    }
-
     .nav_tab {
         display: flex;
         gap: 3rem;
@@ -258,6 +259,25 @@ h1 {
             span {
                 margin-left: 1.5rem;
             }
+        }
+    }
+}
+
+
+.Tour_cont3 {
+
+    .div_text-wrapper {
+        max-width: 47rem;
+        text-align: center;
+        margin: 0 auto;
+        margin-bottom: 10rem;
+
+        h2.headline-2 {
+          margin-bottom: 3rem;  
+        }
+
+        .div-text {
+            color: #A6A6A6;
         }
     }
 }
