@@ -1,5 +1,9 @@
 //sass --watch assets/css/scss/style.scss:assets/css/style.css
 
+// imports
+@import 'font_size.scss';
+@import 'colors.scss';
+
 // variables
 $tablet: 1024px;
 $phone: 360px;
@@ -46,13 +50,8 @@ html {
     font-size: 2rem;
 }
 
-h1, h2, h3 {
-    font-weight: bold;
-}
-
-h1 {
-    font-size: 9.6rem;
-    color: rgba(255, 255, 255, 1)
+.H1 {
+    color: $white_col;
 }
 
 // class global style
@@ -109,11 +108,8 @@ h1 {
     }
 }
 
-.headline-2 {
-    font-size: 6rem;
-    font-weight: 700;
+.H2 {
     margin-bottom: 3.5rem;
-    text-align: center;
 }
 
 
@@ -158,7 +154,7 @@ h1 {
     margin: 0 auto;
     margin-bottom: 25.4rem;
 
-    .headline {
+    .H1 {
         margin-bottom: 5rem;
     }
 
@@ -246,11 +242,6 @@ h1 {
             object-fit: cover;
         }
 
-        &-header {
-            font-size: 3.5rem;
-            font-weight: 500;
-        }
-
         &-price {
             font-size: 1.7rem;
         }
@@ -276,7 +267,7 @@ h1 {
         margin: 0 auto;
         margin-bottom: 10rem;
 
-        h2.headline-2 {
+        H2 {
           margin-bottom: 3rem;  
         }
 

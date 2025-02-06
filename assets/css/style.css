@@ -1,3 +1,82 @@
+.H1 {
+  font-size: 9.6rem;
+  line-height: 1.083;
+  font-weight: 700;
+  color: #1B1F2B;
+}
+@media (max-width: 768px) {
+  .H1 {
+    font-size: 3.4rem;
+    line-height: 1.12;
+  }
+}
+
+.H2 {
+  font-size: 5.9rem;
+  line-height: 1.24;
+  font-weight: 700;
+  color: #1B1F2B;
+}
+@media (max-width: 768px) {
+  .H2 {
+    font-size: 3.4rem;
+    line-height: 1.12;
+  }
+}
+
+.H3 {
+  font-size: 3.5rem;
+  line-height: 1.2;
+  font-weight: 500;
+  color: #1B1F2B;
+}
+@media (max-width: 768px) {
+  .H3 {
+    font-size: 2.3rem;
+    line-height: 1.17;
+    font-weight: 700;
+  }
+}
+
+.p-big {
+  font-size: 2.3rem;
+  line-height: 1.22;
+  font-weight: 700;
+  color: #1B1F2B;
+}
+@media (max-width: 768px) {
+  .p-big {
+    font-size: 1.6rem;
+    line-height: 1.437;
+  }
+}
+
+.p-normal {
+  font-size: 2rem;
+  line-height: 1.4;
+  font-weight: 400;
+  color: #1B1F2B;
+}
+@media (max-width: 768px) {
+  .p-normal {
+    font-size: 1.6rem;
+    line-height: 1.437;
+  }
+}
+
+.p-small {
+  font-size: 1.7rem;
+  line-height: 1.41;
+  font-weight: 400;
+  color: #1B1F2B;
+}
+@media (max-width: 768px) {
+  .p-small {
+    font-size: 1.6rem;
+    line-height: 1.437;
+  }
+}
+
 @font-face {
   font-family: "Roboto";
   src: url("../assets/fonts/Roboto-Regular.ttf") format("ttf");
@@ -28,13 +107,8 @@ html {
   font-size: 2rem;
 }
 
-h1, h2, h3 {
-  font-weight: bold;
-}
-
-h1 {
-  font-size: 9.6rem;
-  color: rgb(255, 255, 255);
+.H1 {
+  color: #FFFFFF;
 }
 
 .bg_global_img {
@@ -83,11 +157,8 @@ h1 {
   background: #EFA501;
 }
 
-.headline-2 {
-  font-size: 6rem;
-  font-weight: 700;
+.H2 {
   margin-bottom: 3.5rem;
-  text-align: center;
 }
 
 .tm__header-container {
@@ -123,7 +194,7 @@ h1 {
   margin: 0 auto;
   margin-bottom: 25.4rem;
 }
-.Tour_cont .headline {
+.Tour_cont .H1 {
   margin-bottom: 5rem;
 }
 .Tour_cont .div-text {
@@ -193,10 +264,6 @@ h1 {
   background: url("../images/card_tour_photo-6.jpg") no-repeat;
   object-fit: cover;
 }
-.Tour_cont2 .pick_the_tour-card-header {
-  font-size: 3.5rem;
-  font-weight: 500;
-}
 .Tour_cont2 .pick_the_tour-card-price {
   font-size: 1.7rem;
 }
@@ -215,7 +282,7 @@ h1 {
   margin: 0 auto;
   margin-bottom: 10rem;
 }
-.Tour_cont3 .div_text-wrapper h2.headline-2 {
+.Tour_cont3 .div_text-wrapper H2 {
   margin-bottom: 3rem;
 }
 .Tour_cont3 .div_text-wrapper .div-text {

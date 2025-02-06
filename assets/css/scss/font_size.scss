@@ -1,0 +1,79 @@
+// sass --watch assets/css/scss/font_size.scss:assets/css/font_size.css
+@import 'colors.scss';
+
+
+// h1 to h3
+.H1 {
+    font-size: 9.6rem;
+    line-height: 1.083;
+    font-weight: 700;
+    color: $black_col;
+    
+    @media (max-width: 768px) {
+        font-size: 3.4rem;
+        line-height: 1.12;
+    }
+}
+
+.H2 {
+    font-size: 5.9rem;
+    line-height: 1.24;
+    font-weight: 700;
+    color: $black_col;
+
+    @media (max-width: 768px) {
+        font-size: 3.4rem;
+        line-height: 1.12;
+    }
+}
+
+.H3 {
+    font-size: 3.5rem;
+    line-height: 1.2;
+    font-weight: 500;
+    color: $black_col;
+    
+    @media (max-width: 768px) {
+        font-size: 2.3rem;
+        line-height: 1.17;
+        font-weight: 700;
+    }
+}
+
+
+// p
+.p-big {
+    font-size: 2.3rem;
+    line-height: 1.22;
+    font-weight: 700;
+    color: $black_col;
+    
+    @media (max-width: 768px) {
+        font-size: 1.6rem;
+        line-height: 1.437;
+    }
+}
+
+.p-normal {
+    font-size: 2rem;
+    line-height: 1.4;
+    font-weight: 400;
+    color: $black_col;
+    
+    @media (max-width: 768px) {
+        font-size: 1.6rem;
+        line-height: 1.437;
+    }
+}
+
+.p-small {
+    font-size: 1.7rem;
+    line-height: 1.41;
+    font-weight: 400;
+    color: $black_col;
+
+    @media (max-width: 768px) {
+        font-size: 1.6rem;
+        line-height: 1.437;
+    }
+}
