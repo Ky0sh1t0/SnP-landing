@@ -1,4 +1,4 @@
-//sass --watch assets/css/style.scss:assets/css/style.css
+//sass --watch assets/css/scss/style.scss:assets/css/style.css
 
 // variables
 $tablet: 1024px;
@@ -66,6 +66,10 @@ h1 {
         max-width: 100%;
         max-height: 100%;
     }
+}
+
+.body__bg {
+    background: #F4F0E9;
 }
 
 .tm__width {
@@ -278,6 +282,36 @@ h1 {
 
         .div-text {
             color: #A6A6A6;
+        }
+    }
+
+    .form_manager {
+        padding: 7rem;
+        border-radius: 5rem;
+        background: #fff;
+
+        .div_field-wrapper {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .div_wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 3rem;
+
+            .div_field-wrapper {
+                width: calc(50% - 3rem);
+            }
+
+        }
+        .div-text_form {
+            font-size: 2rem;
+            margin-bottom: .8rem;
+        }
+
+        .div-text_input {
+            background: #F9F7F4;
         }
     }
 }

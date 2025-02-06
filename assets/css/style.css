@@ -48,6 +48,10 @@ h1 {
   max-height: 100%;
 }
 
+.body__bg {
+  background: #F4F0E9;
+}
+
 .tm__width {
   max-width: 1170px;
   margin: 0 auto;
@@ -216,6 +220,30 @@ h1 {
 }
 .Tour_cont3 .div_text-wrapper .div-text {
   color: #A6A6A6;
+}
+.Tour_cont3 .form_manager {
+  padding: 7rem;
+  border-radius: 5rem;
+  background: #fff;
+}
+.Tour_cont3 .form_manager .div_field-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.Tour_cont3 .form_manager .div_wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+}
+.Tour_cont3 .form_manager .div_wrapper .div_field-wrapper {
+  width: calc(50% - 3rem);
+}
+.Tour_cont3 .form_manager .div-text_form {
+  font-size: 2rem;
+  margin-bottom: 0.8rem;
+}
+.Tour_cont3 .form_manager .div-text_input {
+  background: #F9F7F4;
 }
 
 /*# sourceMappingURL=style.css.map */

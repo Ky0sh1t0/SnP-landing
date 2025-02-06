@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <title>SnP</title>
 </head>
-<body>
+<body class="body__bg">
     <div class="bg_global_img">
         <img src="./assets/images/header-img.jpg" alt="">
     </div>
@@ -99,35 +99,70 @@
 
             <form class="form_manager">
                 <div class="div_wrapper">
-                    <div class="div_field-wrapper">
+                    <fieldset class="div_field-wrapper">
                         <label for="form_name" class="div-text_form">Имя</label>
                         <input name="form_whereToGo" placeholder="Введите ваше имя"
                             id="form_name" class="div-text_input" type="text"/>
-                    </div>
+                    </fieldset>
                     
-                    <div class="div_field-wrapper">
+                    <fieldset class="div_field-wrapper">
                         <label for="form_whereToGo" class="div-text_form">Направление</label>
                         <select name="form_whereToGo" id="form_whereToGo" class="div-text_select">
                             <option value="mountains">Горы</option>
                             <option value="desert">Пустыня</option>
                         </select>
-                    </div>
+                    </fieldset>
 
-                    <div class="div_field-wrapper">
+                    <fieldset class="div_field-wrapper">
                         <label for="form_email" class="div-text_form">Email</label>
                         <input type="email" name="form_email" id="form_email"
                             placeholder="example@mail.com" class="div-text_input">
-                    </div>
+                    </fieldset>
                     
-                    <div class="div_field-wrapper">
+                    <fieldset class="div_field-wrapper">
                         <label for="form_phone" class="div-text_form">Телефон</label>
                         <input type="text" name="form_phone" id="form_phone"
                             placeholder="+7 (___) ___ - __ - __" class="div-text_input">
-                    </div>
+                    </fieldset>
 
-                    <div class="div_field-wrapper">
-                        
-                    </div>
+                    <fieldset class="div_field-wrapper">
+                        <label for="form_dateFrom" class="div-text_form">Дата от</label>
+                        <input type="date" name="form_dateFrom" id="form_dateFrom"
+                            placeholder="ДД.ММ.ГГГГ" class="div-text_input">
+                    </fieldset>
+
+                    <fieldset class="div_field-wrapper">
+                        <label for="form_dateBefore" class="div-text_form">Дата до</label>
+                        <input type="date" name="form_dateBefore" id="form_dateBefore"
+                            placeholder="ДД.ММ.ГГГГ" class="div-text_input">
+                    </fieldset>
+                </div>
+
+                <fieldset class="div_field-wrapper">
+                    <label for="form_comment" class="div-text_form">Комментарий</label>
+                    <textarea type="text" name="form_comment" id="form_comment"
+                        class="div-text_input-large"></textarea>
+                </fieldset>
+
+                <fieldset class="div_confirm-field">
+                    <legend class="div-text_form">Вам есть 18 лет?</legend>
+                    <input type="radio" name="form_yesAge" id="form_yesAge" class="div-radio">
+                    <label for="form_yesAge">Да</label>
+
+                    <input type="radio" name="form_noAge" id="form_noAge" class="div-radio">
+                    <label for="form_noAge">Нет</label>
+                </fieldset>
+
+                <fieldset class="div_confirm-field">
+                    <input type="checkbox" name="form_validate" id="form_validate" class="div-checkbox">
+                    <label for="form_validate">Нажимая кнопку, я принимаю условия
+                         <a href="" class="licenes_confirm">Лицензионного договора</a>
+                    </label>
+                </fieldset>
+
+                <div class="div_button-wrapper">
+                    <button class="div_form-btn div_form-btn-find">Найти тур</button>
+                    <button class="div_form-btn div_form-btn-clear">Сбросить</button>
                 </div>
             </form>
         </div>
