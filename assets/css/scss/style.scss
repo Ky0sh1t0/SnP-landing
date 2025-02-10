@@ -176,6 +176,8 @@ html {
 // Second block style
 
 .Tour_cont2 {
+    text-align: center;
+
     .nav_tab {
         display: flex;
         gap: 3rem;
@@ -211,6 +213,8 @@ html {
         max-width: 37rem;
         color: #fff;
         min-height: 53rem;
+        box-shadow: inset 0 0 80px 120px #00000030;
+        text-align: left;
 
         &-1 {
             background: url('../images/card_tour_photo-1.jpg') no-repeat;
@@ -242,6 +246,10 @@ html {
             object-fit: cover;
         }
 
+        &-header {
+            color: $white_col;
+        }
+
         &-price {
             font-size: 1.7rem;
         }
@@ -253,6 +261,10 @@ html {
             
             span {
                 margin-left: 1.5rem;
+
+                .arrow-to path {
+                    fill: $white_col;
+                }
             }
         }
     }
@@ -296,13 +308,152 @@ html {
             }
 
         }
-        .div-text_form {
-            font-size: 2rem;
+
+        .p-normal {
             margin-bottom: .8rem;
         }
 
-        .div-text_input {
-            background: #F9F7F4;
+        .div-form-field,
+        .div-form-field-large {
+            background: $beige_col_100;
+            padding: 2rem;
+            border: 1px solid $beige_col_200;
+            border-radius: 1rem;
+            appearance: none;
+            resize: none;
+
+            &:focus {
+                outline: none;
+                border: 1px solid $gray_col_300;
+            }
+
+            &:focus-visible {
+                outline: none;
+            }
+
+            &:hover {
+                background: $beige_col_200;
+            }
+        }
+
+        .div-form-select {
+            position: relative;
+
+            .div-form-field {
+                width: 100%;
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                background: url('../icons/dropdown_icon.svg');
+                background-repeat: no-repeat;
+                width: 26px;
+                height: 26px;
+                top: 3rem;
+                right: 2rem;
+            }
+        }
+
+        .div-form-field[type="date"]::-webkit-inner-spin-button,
+        .div-form-field[type="date"]::-webkit-calendar-picker-indicator {
+            display: none;
+        }
+
+        .div-form-field-large {
+            margin-bottom: 3.3rem;
+        }
+
+        .div_confirm-field {
+            display: flex;
+            gap: 3.1rem;
+            align-items: center;
+        }
+
+        .form-field-wrapper {
+            position: relative;
+            display: flex;
+            margin-bottom: 3.3rem;
+        }
+
+        .div-form-radio {
+            appearance: none;
+            
+            &:first {
+                margin-right: 3.1rem;
+            }
+
+            &::before {
+                content: " ";
+                display: inline-flex;
+                bottom: 0;
+                height: 2.4rem;
+                width: 2.4rem;
+                margin-right: 1.1rem;
+                border-radius: 100%;
+                border:2px solid $black_col;
+            }
+
+            &:checked::after {
+                content: "";
+                position: absolute;
+                display: inline-flex;
+                height: 1.2rem;
+                width: 1.2rem;
+                border-radius: 100%;
+                background: $black_col;
+                top: .6rem;
+                left: .6rem;
+            }
+        }
+
+        .div-form-checkbox {
+            appearance: none;
+
+            &::before {
+                content: "";
+                display: inline-flex;
+                width: 2.4rem;
+                height: 2.4rem;
+                border: 2px solid $black_col;
+                margin-right: 1.1rem;
+                border-radius: 0.5rem;
+            }
+
+            &:checked::after {
+                content: "";
+                position: absolute;
+                width: 1.3rem;
+                height: 1rem;
+                top: .7rem;
+                left: .6rem;
+                background: url('data:image/svg+xml,<svg width="13" height="10" viewBox="0 0 13 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M0.293044 4.53581C0.683569 4.14529 1.31673 4.14529 1.70726 4.53581L4.62161 7.45017L11.1574 0.914353C11.5479 0.523829 12.1811 0.523829 12.5716 0.914353C12.9622 1.30488 12.9622 1.93804 12.5716 2.32857L5.32872 9.57149C4.93819 9.96201 4.30503 9.96201 3.9145 9.57149L0.293044 5.95003C-0.09748 5.5595 -0.09748 4.92634 0.293044 4.53581Z" fill="%231B1F2B"/></svg>');
+            }
+        }  
+
+        .p-gray-text {
+            color: $gray_col_300;
+        }
+
+        .licenes_confirm {
+            text-decoration: none;
+        }
+
+        .div_form-btn {
+            padding: 1.5rem 3rem;
+            border: none;
+            border-radius: 1rem;
+            
+            &-find {
+                background: $green_col_400;
+                color: $white_col;
+                margin-right: 3rem;
+            }
+
+            &-clear {
+                background: $green_col_100;
+                color: $green_col_400;
+            }
         }
     }
 }

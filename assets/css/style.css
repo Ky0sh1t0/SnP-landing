@@ -209,6 +209,9 @@ html {
   background: #fff;
 }
 
+.Tour_cont2 {
+  text-align: center;
+}
 .Tour_cont2 .nav_tab {
   display: flex;
   gap: 3rem;
@@ -239,6 +242,8 @@ html {
   max-width: 37rem;
   color: #fff;
   min-height: 53rem;
+  box-shadow: inset 0 0 80px 120px rgba(0, 0, 0, 0.1882352941);
+  text-align: left;
 }
 .Tour_cont2 .pick_the_tour-card-1 {
   background: url("../images/card_tour_photo-1.jpg") no-repeat;
@@ -264,6 +269,9 @@ html {
   background: url("../images/card_tour_photo-6.jpg") no-repeat;
   object-fit: cover;
 }
+.Tour_cont2 .pick_the_tour-card-header {
+  color: #FFFFFF;
+}
 .Tour_cont2 .pick_the_tour-card-price {
   font-size: 1.7rem;
 }
@@ -274,6 +282,9 @@ html {
 }
 .Tour_cont2 .pick_the_tour-card-btn span {
   margin-left: 1.5rem;
+}
+.Tour_cont2 .pick_the_tour-card-btn span .arrow-to path {
+  fill: #FFFFFF;
 }
 
 .Tour_cont3 .div_text-wrapper {
@@ -305,12 +316,131 @@ html {
 .Tour_cont3 .form_manager .div_wrapper .div_field-wrapper {
   width: calc(50% - 3rem);
 }
-.Tour_cont3 .form_manager .div-text_form {
-  font-size: 2rem;
+.Tour_cont3 .form_manager .p-normal {
   margin-bottom: 0.8rem;
 }
-.Tour_cont3 .form_manager .div-text_input {
+.Tour_cont3 .form_manager .div-form-field,
+.Tour_cont3 .form_manager .div-form-field-large {
   background: #F9F7F4;
+  padding: 2rem;
+  border: 1px solid #F4F0E9;
+  border-radius: 1rem;
+  appearance: none;
+  resize: none;
+}
+.Tour_cont3 .form_manager .div-form-field:focus,
+.Tour_cont3 .form_manager .div-form-field-large:focus {
+  outline: none;
+  border: 1px solid #A6A6A6;
+}
+.Tour_cont3 .form_manager .div-form-field:focus-visible,
+.Tour_cont3 .form_manager .div-form-field-large:focus-visible {
+  outline: none;
+}
+.Tour_cont3 .form_manager .div-form-field:hover,
+.Tour_cont3 .form_manager .div-form-field-large:hover {
+  background: #F4F0E9;
+}
+.Tour_cont3 .form_manager .div-form-select {
+  position: relative;
+}
+.Tour_cont3 .form_manager .div-form-select .div-form-field {
+  width: 100%;
+}
+.Tour_cont3 .form_manager .div-form-select::after {
+  content: "";
+  position: absolute;
+  background: url("../icons/dropdown_icon.svg");
+  background-repeat: no-repeat;
+  width: 26px;
+  height: 26px;
+  top: 3rem;
+  right: 2rem;
+}
+.Tour_cont3 .form_manager .div-form-field[type=date]::-webkit-inner-spin-button,
+.Tour_cont3 .form_manager .div-form-field[type=date]::-webkit-calendar-picker-indicator {
+  display: none;
+}
+.Tour_cont3 .form_manager .div-form-field-large {
+  margin-bottom: 3.3rem;
+}
+.Tour_cont3 .form_manager .div_confirm-field {
+  display: flex;
+  gap: 3.1rem;
+  align-items: center;
+}
+.Tour_cont3 .form_manager .form-field-wrapper {
+  position: relative;
+  display: flex;
+  margin-bottom: 3.3rem;
+}
+.Tour_cont3 .form_manager .div-form-radio {
+  appearance: none;
+}
+.Tour_cont3 .form_manager .div-form-radio:first {
+  margin-right: 3.1rem;
+}
+.Tour_cont3 .form_manager .div-form-radio::before {
+  content: " ";
+  display: inline-flex;
+  bottom: 0;
+  height: 2.4rem;
+  width: 2.4rem;
+  margin-right: 1.1rem;
+  border-radius: 100%;
+  border: 2px solid #1B1F2B;
+}
+.Tour_cont3 .form_manager .div-form-radio:checked::after {
+  content: "";
+  position: absolute;
+  display: inline-flex;
+  height: 1.2rem;
+  width: 1.2rem;
+  border-radius: 100%;
+  background: #1B1F2B;
+  top: 0.6rem;
+  left: 0.6rem;
+}
+.Tour_cont3 .form_manager .div-form-checkbox {
+  appearance: none;
+}
+.Tour_cont3 .form_manager .div-form-checkbox::before {
+  content: "";
+  display: inline-flex;
+  width: 2.4rem;
+  height: 2.4rem;
+  border: 2px solid #1B1F2B;
+  margin-right: 1.1rem;
+  border-radius: 0.5rem;
+}
+.Tour_cont3 .form_manager .div-form-checkbox:checked::after {
+  content: "";
+  position: absolute;
+  width: 1.3rem;
+  height: 1rem;
+  top: 0.7rem;
+  left: 0.6rem;
+  background: url('data:image/svg+xml,<svg width="13" height="10" viewBox="0 0 13 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M0.293044 4.53581C0.683569 4.14529 1.31673 4.14529 1.70726 4.53581L4.62161 7.45017L11.1574 0.914353C11.5479 0.523829 12.1811 0.523829 12.5716 0.914353C12.9622 1.30488 12.9622 1.93804 12.5716 2.32857L5.32872 9.57149C4.93819 9.96201 4.30503 9.96201 3.9145 9.57149L0.293044 5.95003C-0.09748 5.5595 -0.09748 4.92634 0.293044 4.53581Z" fill="%231B1F2B"/></svg>');
+}
+.Tour_cont3 .form_manager .p-gray-text {
+  color: #A6A6A6;
+}
+.Tour_cont3 .form_manager .licenes_confirm {
+  text-decoration: none;
+}
+.Tour_cont3 .form_manager .div_form-btn {
+  padding: 1.5rem 3rem;
+  border: none;
+  border-radius: 1rem;
+}
+.Tour_cont3 .form_manager .div_form-btn-find {
+  background: #286562;
+  color: #FFFFFF;
+  margin-right: 3rem;
+}
+.Tour_cont3 .form_manager .div_form-btn-clear {
+  background: #E0F0E5;
+  color: #286562;
 }
 
 /*# sourceMappingURL=style.css.map */
