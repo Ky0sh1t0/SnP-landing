@@ -123,7 +123,7 @@ html {
 }
 
 .body__bg {
-  background: #F4F0E9;
+  background: #F9F7F4;
 }
 
 .tm__width {
@@ -159,6 +159,16 @@ html {
 
 .H2 {
   margin-bottom: 3.5rem;
+}
+
+.div_cont-header-wrapper {
+  max-width: 55rem;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 10rem;
+}
+.div_cont-header-wrapper .p-normal {
+  color: #A6A6A6;
 }
 
 .tm__header-container {
@@ -441,6 +451,54 @@ html {
 .Tour_cont3 .form_manager .div_form-btn-clear {
   background: #E0F0E5;
   color: #286562;
+}
+
+.Tour-travellers_feedback {
+  margin-bottom: 13.5rem;
+}
+.Tour-travellers_feedback .feedback {
+  display: flex;
+  gap: 3rem;
+}
+.Tour-travellers_feedback .feedback-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 70rem;
+  width: calc(50% - 3rem);
+  padding: 4rem;
+  border-radius: 5rem;
+  background: #F4F0E9;
+}
+.Tour-travellers_feedback .feedback-card-info {
+  display: flex;
+  justify-content: space-between;
+  margin-top: auto;
+}
+.Tour-travellers_feedback .feedback-card-info-tour {
+  color: #A6A6A6;
+}
+.Tour-travellers_feedback .feedback-card-info-img {
+  width: 7.5rem;
+  height: 7.5rem;
+  border-radius: 100%;
+  overflow: hidden;
+}
+.Tour-travellers_feedback .feedback-card-info-img img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.Tour-travellers_photos {
+  margin-bottom: 13.5rem;
+  text-align: center;
+}
+.Tour-travellers_photos .H2 {
+  margin-bottom: 3rem;
+}
+.Tour-travellers_photos .p-normal {
+  color: #A6A6A6;
+  max-width: 41rem;
+  margin: 0 auto;
 }
 
 /*# sourceMappingURL=style.css.map */
