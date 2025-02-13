@@ -80,10 +80,13 @@ html {
     line-height: 140%;
 }
 
+.btn-social {
+    text-decoration: none;
+}
 
 .nav_item {
     text-decoration: none;
-    color: #fff;
+    color: $white_col;
     position: relative;
 
     &:hover {
@@ -92,7 +95,7 @@ html {
             position: absolute;
             width: 100%;
             height: 1px;
-            background: #fff;
+            background: $white_col;
             bottom: 0;
             left: 0;
         }
@@ -103,7 +106,7 @@ html {
 
         &::after {
             height: 2px;
-            background: #EFA501;
+            background: #EFA501 !important;
         }
     }
 }
@@ -121,6 +124,39 @@ html {
 
     .p-normal {
         color: $gray_col_300;
+        margin: 0 auto;
+        max-width: 41rem;
+    }
+}
+
+.btn-arrow {
+    margin-top: auto;
+    font-size: 2.3rem;
+    font-weight: 700;
+    text-decoration: none;
+    color: $white_col;
+    padding: .7rem 2rem;
+    border-radius: 5rem;
+    width: fit-content;
+
+    span {
+        margin-left: 1.5rem;
+
+        .arrow-to path {
+            fill: $white_col;
+        }
+    } 
+
+    &:hover {
+        background: $green_col_400;
+    }
+
+    &.active {
+        background: $orange_col_100;
+    }
+
+    @media (max-width: 767px) {
+        padding: 0;
     }
 }
 
@@ -171,7 +207,7 @@ html {
 
     .div-text {
         font-size: 2rem;
-        color: #fff;
+        color: $white_col;
         margin-bottom: 5rem;
     }
 
@@ -179,7 +215,7 @@ html {
         font-size: 1.7rem;
         padding: .5rem 2rem;
         border-radius: 1rem;
-        background: #fff;
+        background: $white_col;
     }
 }
 
@@ -199,12 +235,12 @@ html {
         .nav_item {
             font-weight: 700;
             font-size: 2.3rem;
-            color: #000;
+            color: $black_col;
             cursor: pointer;
 
             &:hover::after {
                 height: 2px;
-                background: #000;
+                background: $black_col;
             }
         }
     }
@@ -222,7 +258,7 @@ html {
         flex-direction: column;
         border-radius: 5rem;
         max-width: 37rem;
-        color: #fff;
+        color: $white_col;
         min-height: 53rem;
         box-shadow: inset 0 0 80px 120px #00000030;
         text-align: left;
@@ -265,18 +301,8 @@ html {
             font-size: 1.7rem;
         }
 
-        &-btn {
-            margin-top: auto;
-            font-size: 2.3rem;
-            font-weight: 700;
-            
-            span {
-                margin-left: 1.5rem;
-
-                .arrow-to path {
-                    fill: $white_col;
-                }
-            }
+        .btn-arrow {
+            margin-left: -2rem;
         }
     }
 }
@@ -302,7 +328,7 @@ html {
     .form_manager {
         padding: 7rem;
         border-radius: 5rem;
-        background: #fff;
+        background: $white_col;
 
         .div_field-wrapper {
             display: flex;
@@ -511,8 +537,10 @@ html {
 }
 
 .Tour-travellers_photos {
-    margin-bottom: 13.5rem;
     text-align: center;
+    max-width: 95%;
+    margin: 0 auto;
+    margin-bottom: 13.5rem;
 
     .H2 {
         margin-bottom: 3rem;
@@ -521,6 +549,198 @@ html {
     .p-normal {
         color: $gray_col_300;
         max-width: 41rem;
-        margin: 0 auto
+        margin: 0 auto;
+        margin-bottom: 10rem;
+    }
+
+    .img_cont {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 3rem;
+
+        .img-wrapper {
+            border-radius: 5rem;
+            overflow: hidden;
+
+            &-col-4 {
+                width: calc(25% - 3rem);
+            }
+
+            &-col-3 {
+                width: calc(20% - 3rem);
+            }
+
+            img {
+                width: 100%;
+                height: 30rem;
+                object-fit: cover;
+            }
+        }
+    }
+}
+
+.Tour-travellers_stories {
+    margin-bottom: 13.5rem;
+
+    .div_cont-header-wrapper {
+        max-width: 61rem;
+    }
+
+    .story {
+        width: 100%;
+        height: 56.6rem;
+        padding: 6rem;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        margin-bottom: 5rem;
+
+        // &-1 {
+        //     background: url('/assets/images/story_photo-1.jpg');
+        //     background-size: 100%;
+        //     background-repeat: no-repeat;
+        // }
+
+        & > * {
+            position: relative;
+            z-index: 4;
+        }
+
+        &-img {
+            position: absolute;
+            width: 117rem;
+            height: 56.6rem;
+            z-index: 2;
+            border-radius: 5rem;
+            top: 0;
+            left: 0;
+            overflow: hidden;
+
+            img {
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+
+        &-box-shadow {
+            position: absolute;
+            box-shadow: inset 0 0 80px 15rem #00000030;
+            z-index: 3;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            border-radius: 5rem;
+        }
+
+
+        &-body {
+            color: $white_col;
+            max-width: 55rem;
+
+            .H3 {
+                color: $white_col;
+                margin-bottom: 3.7rem;
+            }
+
+            .p-normal {
+                color: $white_col;
+                margin-bottom: 3rem;
+            }
+
+            &-list {
+                margin-left: 1.5rem;
+            }
+        }
+
+        &-footer {
+            display: flex;
+            margin-top: auto;
+
+            .btn-arrow {
+                margin-left: -2rem;
+            }
+
+            &-social {
+                margin-left: auto;
+                align-content: center;
+
+                .btn-social {
+                    color: $white_col;
+
+                    &:not(:last-child) {
+                        margin-right: 3.5rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.Tour-travellers_end {
+    .div_cont-header-wrapper {
+        max-width: 77rem;
+        display: flex;
+        text-align: left;
+
+        .img-wrapper {
+            width: 37rem;
+            height: 37rem;
+            border-radius: 5rem;
+            overflow: hidden;
+            margin-right: 3rem;
+
+            img {
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .div_text-wrapper {
+            max-width: 37rem;
+            align-content: center;
+
+            .H3 {
+                font-weight: 700;
+                margin-bottom: 2rem;
+            }
+
+            .p-normal {
+                max-width: none;
+            }
+
+            .btn-social {
+                color: $black_col;
+            }
+        }
+    }
+}
+
+// footer 
+
+.tm__footer-container {
+    background: $beige_col_200;
+    padding: 3rem;
+
+    .btn-social {
+        color: $gray_col_300;
+    }
+
+    .footer {
+        display: flex;
+        justify-content: space-between;
+
+        &-social {
+            display: flex;
+            gap: 2.5rem;
+
+            .btn-social {
+                color: $black_col;
+
+                &-img {
+                    margin-right: 1rem;
+                }
+            }
+        }
     }
 }
