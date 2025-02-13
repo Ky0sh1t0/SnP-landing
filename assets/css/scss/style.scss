@@ -68,7 +68,7 @@ html {
 }
 
 .body__bg {
-    background: #F4F0E9;
+    background: $beige_col_100;
 }
 
 .tm__width {
@@ -80,10 +80,13 @@ html {
     line-height: 140%;
 }
 
+.btn-social {
+    text-decoration: none;
+}
 
 .nav_item {
     text-decoration: none;
-    color: #fff;
+    color: $white_col;
     position: relative;
 
     &:hover {
@@ -92,7 +95,7 @@ html {
             position: absolute;
             width: 100%;
             height: 1px;
-            background: #fff;
+            background: $white_col;
             bottom: 0;
             left: 0;
         }
@@ -103,7 +106,7 @@ html {
 
         &::after {
             height: 2px;
-            background: #EFA501;
+            background: #EFA501 !important;
         }
     }
 }
@@ -112,6 +115,50 @@ html {
     margin-bottom: 3.5rem;
 }
 
+
+.div_cont-header-wrapper {
+    max-width: 55rem;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 10rem;
+
+    .p-normal {
+        color: $gray_col_300;
+        margin: 0 auto;
+        max-width: 41rem;
+    }
+}
+
+.btn-arrow {
+    margin-top: auto;
+    font-size: 2.3rem;
+    font-weight: 700;
+    text-decoration: none;
+    color: $white_col;
+    padding: .7rem 2rem;
+    border-radius: 5rem;
+    width: fit-content;
+
+    span {
+        margin-left: 1.5rem;
+
+        .arrow-to path {
+            fill: $white_col;
+        }
+    } 
+
+    &:hover {
+        background: $green_col_400;
+    }
+
+    &.active {
+        background: $orange_col_100;
+    }
+
+    @media (max-width: 767px) {
+        padding: 0;
+    }
+}
 
 // block styles
 .tm__header-container {
@@ -160,7 +207,7 @@ html {
 
     .div-text {
         font-size: 2rem;
-        color: #fff;
+        color: $white_col;
         margin-bottom: 5rem;
     }
 
@@ -168,7 +215,7 @@ html {
         font-size: 1.7rem;
         padding: .5rem 2rem;
         border-radius: 1rem;
-        background: #fff;
+        background: $white_col;
     }
 }
 
@@ -176,6 +223,8 @@ html {
 // Second block style
 
 .Tour_cont2 {
+    text-align: center;
+
     .nav_tab {
         display: flex;
         gap: 3rem;
@@ -186,12 +235,12 @@ html {
         .nav_item {
             font-weight: 700;
             font-size: 2.3rem;
-            color: #000;
+            color: $black_col;
             cursor: pointer;
 
             &:hover::after {
                 height: 2px;
-                background: #000;
+                background: $black_col;
             }
         }
     }
@@ -209,8 +258,10 @@ html {
         flex-direction: column;
         border-radius: 5rem;
         max-width: 37rem;
-        color: #fff;
+        color: $white_col;
         min-height: 53rem;
+        box-shadow: inset 0 0 80px 120px #00000030;
+        text-align: left;
 
         &-1 {
             background: url('../images/card_tour_photo-1.jpg') no-repeat;
@@ -242,18 +293,16 @@ html {
             object-fit: cover;
         }
 
+        &-header {
+            color: $white_col;
+        }
+
         &-price {
             font-size: 1.7rem;
         }
 
-        &-btn {
-            margin-top: auto;
-            font-size: 2.3rem;
-            font-weight: 700;
-            
-            span {
-                margin-left: 1.5rem;
-            }
+        .btn-arrow {
+            margin-left: -2rem;
         }
     }
 }
@@ -279,7 +328,7 @@ html {
     .form_manager {
         padding: 7rem;
         border-radius: 5rem;
-        background: #fff;
+        background: $white_col;
 
         .div_field-wrapper {
             display: flex;
@@ -296,13 +345,402 @@ html {
             }
 
         }
-        .div-text_form {
-            font-size: 2rem;
+
+        .p-normal {
             margin-bottom: .8rem;
         }
 
-        .div-text_input {
-            background: #F9F7F4;
+        .div-form-field,
+        .div-form-field-large {
+            background: $beige_col_100;
+            padding: 2rem;
+            border: 1px solid $beige_col_200;
+            border-radius: 1rem;
+            appearance: none;
+            resize: none;
+
+            &:focus {
+                outline: none;
+                border: 1px solid $gray_col_300;
+            }
+
+            &:focus-visible {
+                outline: none;
+            }
+
+            &:hover {
+                background: $beige_col_200;
+            }
+        }
+
+        .div-form-select {
+            position: relative;
+
+            .div-form-field {
+                width: 100%;
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                background: url('../icons/dropdown_icon.svg');
+                background-repeat: no-repeat;
+                width: 26px;
+                height: 26px;
+                top: 3rem;
+                right: 2rem;
+            }
+        }
+
+        .div-form-field[type="date"]::-webkit-inner-spin-button,
+        .div-form-field[type="date"]::-webkit-calendar-picker-indicator {
+            display: none;
+        }
+
+        .div-form-field-large {
+            margin-bottom: 3.3rem;
+        }
+
+        .div_confirm-field {
+            display: flex;
+            gap: 3.1rem;
+            align-items: center;
+        }
+
+        .form-field-wrapper {
+            position: relative;
+            display: flex;
+            margin-bottom: 3.3rem;
+        }
+
+        .div-form-radio {
+            appearance: none;
+            
+            &:first {
+                margin-right: 3.1rem;
+            }
+
+            &::before {
+                content: " ";
+                display: inline-flex;
+                bottom: 0;
+                height: 2.4rem;
+                width: 2.4rem;
+                margin-right: 1.1rem;
+                border-radius: 100%;
+                border:2px solid $black_col;
+            }
+
+            &:checked::after {
+                content: "";
+                position: absolute;
+                display: inline-flex;
+                height: 1.2rem;
+                width: 1.2rem;
+                border-radius: 100%;
+                background: $black_col;
+                top: .6rem;
+                left: .6rem;
+            }
+        }
+
+        .div-form-checkbox {
+            appearance: none;
+
+            &::before {
+                content: "";
+                display: inline-flex;
+                width: 2.4rem;
+                height: 2.4rem;
+                border: 2px solid $black_col;
+                margin-right: 1.1rem;
+                border-radius: 0.5rem;
+            }
+
+            &:checked::after {
+                content: "";
+                position: absolute;
+                width: 1.3rem;
+                height: 1rem;
+                top: .7rem;
+                left: .6rem;
+                background: url('data:image/svg+xml,<svg width="13" height="10" viewBox="0 0 13 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M0.293044 4.53581C0.683569 4.14529 1.31673 4.14529 1.70726 4.53581L4.62161 7.45017L11.1574 0.914353C11.5479 0.523829 12.1811 0.523829 12.5716 0.914353C12.9622 1.30488 12.9622 1.93804 12.5716 2.32857L5.32872 9.57149C4.93819 9.96201 4.30503 9.96201 3.9145 9.57149L0.293044 5.95003C-0.09748 5.5595 -0.09748 4.92634 0.293044 4.53581Z" fill="%231B1F2B"/></svg>');
+            }
+        }  
+
+        .p-gray-text {
+            color: $gray_col_300;
+        }
+
+        .licenes_confirm {
+            text-decoration: none;
+        }
+
+        .div_form-btn {
+            padding: 1.5rem 3rem;
+            border: none;
+            border-radius: 1rem;
+            
+            &-find {
+                background: $green_col_400;
+                color: $white_col;
+                margin-right: 3rem;
+            }
+
+            &-clear {
+                background: $green_col_100;
+                color: $green_col_400;
+            }
+        }
+    }
+}
+
+.Tour-travellers_feedback {
+    margin-bottom: 13.5rem;
+
+    .feedback {
+        display: flex;
+        gap: 3rem;
+        
+        &-card {
+            display: flex;
+            flex-direction: column;
+            min-height: 70rem;
+            width: calc(50% - 3rem);
+            padding: 4rem;
+            border-radius: 5rem;
+            background: $beige_col_200;
+
+            &-info {
+                display: flex;
+                justify-content: space-between;
+                margin-top: auto;
+
+                &-tour {
+                    color: $gray_col_300;
+                }
+
+                &-img {
+                    width: 7.5rem;
+                    height: 7.5rem;
+                    border-radius: 100%;
+                    overflow: hidden;
+
+                    img {
+                        width: 100%;
+                        object-fit: cover;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.Tour-travellers_photos {
+    text-align: center;
+    max-width: 95%;
+    margin: 0 auto;
+    margin-bottom: 13.5rem;
+
+    .H2 {
+        margin-bottom: 3rem;
+    }
+
+    .p-normal {
+        color: $gray_col_300;
+        max-width: 41rem;
+        margin: 0 auto;
+        margin-bottom: 10rem;
+    }
+
+    .img_cont {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 3rem;
+
+        .img-wrapper {
+            border-radius: 5rem;
+            overflow: hidden;
+
+            &-col-4 {
+                width: calc(25% - 3rem);
+            }
+
+            &-col-3 {
+                width: calc(20% - 3rem);
+            }
+
+            img {
+                width: 100%;
+                height: 30rem;
+                object-fit: cover;
+            }
+        }
+    }
+}
+
+.Tour-travellers_stories {
+    margin-bottom: 13.5rem;
+
+    .div_cont-header-wrapper {
+        max-width: 61rem;
+    }
+
+    .story {
+        width: 100%;
+        height: 56.6rem;
+        padding: 6rem;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        margin-bottom: 5rem;
+
+        // &-1 {
+        //     background: url('/assets/images/story_photo-1.jpg');
+        //     background-size: 100%;
+        //     background-repeat: no-repeat;
+        // }
+
+        & > * {
+            position: relative;
+            z-index: 4;
+        }
+
+        &-img {
+            position: absolute;
+            width: 117rem;
+            height: 56.6rem;
+            z-index: 2;
+            border-radius: 5rem;
+            top: 0;
+            left: 0;
+            overflow: hidden;
+
+            img {
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+
+        &-box-shadow {
+            position: absolute;
+            box-shadow: inset 0 0 80px 15rem #00000030;
+            z-index: 3;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            border-radius: 5rem;
+        }
+
+
+        &-body {
+            color: $white_col;
+            max-width: 55rem;
+
+            .H3 {
+                color: $white_col;
+                margin-bottom: 3.7rem;
+            }
+
+            .p-normal {
+                color: $white_col;
+                margin-bottom: 3rem;
+            }
+
+            &-list {
+                margin-left: 1.5rem;
+            }
+        }
+
+        &-footer {
+            display: flex;
+            margin-top: auto;
+
+            .btn-arrow {
+                margin-left: -2rem;
+            }
+
+            &-social {
+                margin-left: auto;
+                align-content: center;
+
+                .btn-social {
+                    color: $white_col;
+
+                    &:not(:last-child) {
+                        margin-right: 3.5rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.Tour-travellers_end {
+    .div_cont-header-wrapper {
+        max-width: 77rem;
+        display: flex;
+        text-align: left;
+
+        .img-wrapper {
+            width: 37rem;
+            height: 37rem;
+            border-radius: 5rem;
+            overflow: hidden;
+            margin-right: 3rem;
+
+            img {
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .div_text-wrapper {
+            max-width: 37rem;
+            align-content: center;
+
+            .H3 {
+                font-weight: 700;
+                margin-bottom: 2rem;
+            }
+
+            .p-normal {
+                max-width: none;
+            }
+
+            .btn-social {
+                color: $black_col;
+            }
+        }
+    }
+}
+
+// footer 
+
+.tm__footer-container {
+    background: $beige_col_200;
+    padding: 3rem;
+
+    .btn-social {
+        color: $gray_col_300;
+    }
+
+    .footer {
+        display: flex;
+        justify-content: space-between;
+
+        &-social {
+            display: flex;
+            gap: 2.5rem;
+
+            .btn-social {
+                color: $black_col;
+
+                &-img {
+                    margin-right: 1rem;
+                }
+            }
         }
     }
 }
