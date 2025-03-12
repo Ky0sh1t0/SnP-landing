@@ -136,6 +136,7 @@ html {
 }
 
 .btn-social {
+  cursor: pointer;
   text-decoration: none;
 }
 
@@ -198,6 +199,9 @@ html {
 }
 .btn-arrow.active {
   background: #F8E6BE;
+}
+.btn-arrow:active {
+  background: #EFA501;
 }
 @media (max-width: 767px) {
   .btn-arrow {
@@ -474,9 +478,21 @@ html {
   color: #FFFFFF;
   margin-right: 3rem;
 }
+.Tour_cont3 .form_manager .div_form-btn-find:hover {
+  background: #3B7E7B;
+}
+.Tour_cont3 .form_manager .div_form-btn-find:active {
+  background: #627F7E;
+}
 .Tour_cont3 .form_manager .div_form-btn-clear {
   background: #E0F0E5;
   color: #286562;
+}
+.Tour_cont3 .form_manager .div_form-btn-clear:hover {
+  background: #F1F3F2;
+}
+.Tour_cont3 .form_manager .div_form-btn-clear:active {
+  background: #D9DFDB;
 }
 
 .Tour-travellers_feedback {

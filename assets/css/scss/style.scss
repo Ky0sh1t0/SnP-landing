@@ -81,6 +81,7 @@ html {
 }
 
 .btn-social {
+    cursor: pointer;
     text-decoration: none;
 }
 
@@ -153,6 +154,10 @@ html {
 
     &.active {
         background: $orange_col_100;
+    }
+
+    &:active {
+        background: $orange_col_200;
     }
 
     @media (max-width: 767px) {
@@ -485,11 +490,27 @@ html {
                 background: $green_col_400;
                 color: $white_col;
                 margin-right: 3rem;
+
+                &:hover {
+                    background: $green_col_300;
+                }
+
+                &:active { 
+                    background: $green_col_200;
+                }
             }
 
             &-clear {
                 background: $green_col_100;
                 color: $green_col_400;
+
+                &:hover {
+                    background: $gray_col_100;
+                }
+
+                &:active {
+                    background: $gray_col_200;
+                }
             }
         }
     }
